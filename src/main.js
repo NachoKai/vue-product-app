@@ -2,8 +2,8 @@ Vue.component("product", {
   props: {
     premium: {
       type: Boolean,
-      required: true
-    }
+      required: true,
+    },
   },
 
   data() {
@@ -22,17 +22,17 @@ Vue.component("product", {
           variantColor: "hsl(148, 57%, 36%)",
           variantImage:
             "https://www.vuemastery.com/images/challenges/vmSocks-green-onWhite.jpg",
-          variantQuantity: 12
+          variantQuantity: 12,
         },
         {
           variantId: 2235,
           variantColor: "hsl(215, 31%, 25%)",
           variantImage:
             "https://www.vuemastery.com/images/challenges/vmSocks-blue-onWhite.jpg",
-          variantQuantity: 4
-        }
+          variantQuantity: 4,
+        },
       ],
-      sizes: ["S", "M", "L", "XL", "XXL", "XXXL"]
+      sizes: ["S", "M", "L", "XL", "XXL", "XXXL"],
     };
   },
 
@@ -54,7 +54,7 @@ Vue.component("product", {
     },
     updateProduct(index) {
       this.selectedVariant = index;
-    }
+    },
   },
 
   computed: {
@@ -72,7 +72,7 @@ Vue.component("product", {
     },
     shipping() {
       return this.premium ? "Free" : "2.99";
-    }
+    },
   },
 
   template: `
@@ -118,14 +118,14 @@ Vue.component("product", {
             <button @click="removeFromCart" :disabled="!inStock" :class="{ disabledButton: inStock }">Remove from cart</button></div>
         </div>
   </div>
-  `
+  `,
 });
 
 const app = new Vue({
   el: "#app",
   data: {
     premium: true,
-    cart: []
+    cart: [],
   },
   methods: {
     updateCartAdd(id) {
@@ -136,6 +136,6 @@ const app = new Vue({
     },
     resetCart() {
       this.cart = [];
-    }
-  }
+    },
+  },
 });
