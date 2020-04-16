@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Titulo</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/429b57eee3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="nav-bar"></div>
+    <div id="app">
+      <product
+        :premium="premium"
+        @add-to-cart="updateCartAdd"
+        @remove-from-cart="updateCartRemove"
+      ></product>
+
+      <product
+        :premium="premium"
+        @add-to-cart="updateCartAdd"
+        @remove-from-cart="updateCartRemove"
+      ></product>
+
+      <product
+        :premium="premium"
+        @add-to-cart="updateCartAdd"
+        @remove-from-cart="updateCartRemove"
+      ></product>
+
+      <div class="cart">
+        Cart ({{ cart.length }}) | <a href="#" @click="resetCart">&times;</a>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="src/main.js"></script>
+  </body>
+</html>

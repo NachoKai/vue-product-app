@@ -1,0 +1,159 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #282828;
+  margin: 0;
+  background: #fafafa;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.nav-bar {
+  background: -webkit-gradient(linear, right top, left top, from(#84cf6a), to(#16c0b0));
+  background: linear-gradient(-90deg, #84cf6a, #16c0b0);
+  height: 60px;
+}
+
+#app {
+  position: relative;
+  margin: 30px;
+}
+
+.product {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  grid-column-gap: 30px;
+}
+
+a {
+  color: #1e95ea;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.product-image img {
+  display: block;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  max-width: 100%;
+  padding: 20px;
+  background: #fff;
+}
+
+.product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.product-info h1 {
+  margin: 0.5em 0;
+  font-size: 1.75em;
+}
+
+.product-info .outOfStock {
+  text-decoration: line-through;
+}
+
+.product-info button {
+  font-weight: bold;
+  margin: 0 0.5rem;
+  width: 160px;
+  height: 50px;
+  margin-bottom: 2em;
+  border: none;
+  border-radius: 3px;
+  background: #1e95ea;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.product-info button:hover {
+  background: #106bab;
+}
+
+.product-info button.disabledButton {
+  background-color: #d8d8d8;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+button,
+select {
+  font-family: "Helvetica Neue", Tahoma, sans-serif;
+}
+
+.color-box {
+  cursor: pointer;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5em;
+  border-radius: 50%;
+}
+
+.cart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid #d8d8d8;
+  padding: 1.25em 20px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.review-form {
+  width: 30%;
+  padding: 20px;
+  border: 1px solid #d8d8d8;
+}
+
+input {
+  width: 100%;
+  height: 25px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 60px;
+}
+
+.colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.color-title {
+  margin-right: 0.5rem;
+}
+
+.color-size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
