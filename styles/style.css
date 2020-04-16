@@ -157,3 +157,8 @@ textarea {
   display: -ms-flexbox;
   display: flex;
 }
+
+.product {
+  padding: 1rem;
+  margin: 1rem;
+}

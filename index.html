@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>Titulo</title>
+    <title>Vue Product App</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -20,18 +20,21 @@
     <div class="nav-bar"></div>
     <div id="app">
       <product
+        class="product"
         :premium="premium"
         @add-to-cart="updateCartAdd"
         @remove-from-cart="updateCartRemove"
       ></product>
 
       <product
+        class="product"
         :premium="premium"
         @add-to-cart="updateCartAdd"
         @remove-from-cart="updateCartRemove"
       ></product>
 
       <product
+        class="product"
         :premium="premium"
         @add-to-cart="updateCartAdd"
         @remove-from-cart="updateCartRemove"
