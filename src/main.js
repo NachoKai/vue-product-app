@@ -22,10 +22,8 @@ Vue.component("product-review", {
       <option>5</option>
     </select>
   </p>
-
-  <p>
-    <input type="submit" value="Submit">
-  </p>
+  
+    <input type="submit" class="review-btn" value="Submit">
 
   </form>
   `,
@@ -168,7 +166,7 @@ Vue.component("product", {
         <br>
         <div class="buttons">
             <button @click="addToCart" :disabled="!inStock" :class="{ disabledButton: !inStock }">Add to cart</button>
-            <button @click="removeFromCart" :disabled="!inStock" :class="{ disabledButton: inStock }">Remove from cart</button></div>
+            <button @click="removeFromCart" :disabled="inStock" :class="{ disabledButton: inStock }">Remove from cart</button></div>
         </div>
 
         <div>

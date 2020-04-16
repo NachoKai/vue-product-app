@@ -112,6 +112,10 @@ select {
 }
 
 .review-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
   border-radius: 0.5rem;
   width: 50%;
   padding: 20px;
@@ -121,11 +125,13 @@ select {
 input {
   width: 100%;
   height: 25px;
+  max-width: 240px;
   margin-bottom: 20px;
 }
 
 textarea {
   width: 100%;
+  max-width: 240px;
   height: 60px;
 }
 
@@ -145,4 +151,21 @@ textarea {
 .product {
   padding: 1rem;
   margin: 1rem;
+}
+
+.review-btn {
+  font-weight: bold;
+  width: 150px;
+  height: 30px;
+  margin-top: 1em;
+  border: none;
+  border-radius: 0.5rem;
+  background: #1e95ea;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 0;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
 }
