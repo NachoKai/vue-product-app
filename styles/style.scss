@@ -240,3 +240,12 @@ textarea {
 h2 {
   font-size: 1.6em;
 }
+
+.activeTab {
+  color: #16c0b0;
+  text-decoration: underline;
+}
+
+.tab:hover {
+  cursor: pointer;
+}
