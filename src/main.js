@@ -1,3 +1,5 @@
+let eventBus = new Vue();
+
 Vue.component("product-review", {
   template: `
   <div class="form-rev">
@@ -79,8 +81,6 @@ Vue.component("product-review", {
     },
   },
 });
-
-let eventBus = new Vue();
 
 Vue.component("product", {
   props: {
