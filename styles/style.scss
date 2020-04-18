@@ -246,6 +246,24 @@ h2 {
   text-decoration: underline;
 }
 
-.tab:hover {
-  cursor: pointer;
+.reviews-list-ul {
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
+.tab {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #dddddd;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30px;
 }

@@ -292,6 +292,30 @@ h2 {
   text-decoration: underline;
 }
 
+.reviews-list-ul {
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
+.tab {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #dddddd;
+}
+
 .tab:hover {
   cursor: pointer;
+}
+
+.tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 30px;
 }

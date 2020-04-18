@@ -1,5 +1,4 @@
 let eventBus = new Vue();
-
 Vue.component("product-review", {
   template: `
   <div class="form-rev">
@@ -234,6 +233,7 @@ Vue.component("product-tabs", {
   },
   template: `
 <div>
+<div class="tabs">
   <span
     class="tab"
     :class="{ activeTab: selectedTab === tab}"
@@ -242,12 +242,12 @@ Vue.component("product-tabs", {
     @click="selectedTab = tab"
   >
     {{ tab }}
-  </span>
+  </span></div>
 
 <div v-show="selectedTab === 'Reviews'" class="reviews-list">
   <h2>Reviews</h2>
   <p v-if="!reviews.length">There are no reviews yet.</p>
-  <ul>
+  <ul class="reviews-list-ul">
     <li v-for="review in reviews">
       <p><b>Name: </b>{{ review.name }}</p>
       <p><b>Rating: </b>{{ review.rating }}</p>
