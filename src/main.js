@@ -1,6 +1,7 @@
 Vue.component("product-review", {
   template: `
   <div class="form-rev">
+  <h2>Make a Review</h2>
   <form class="review-form" @submit.prevent="onSubmit">
 
     <p v-if="errors.length">
