@@ -78,8 +78,7 @@ a {
 }
 
 .product-info h1 {
-  margin: 0.5em 0;
-  font-size: 1.75em;
+  font-weight: bold;
 }
 
 .product-info .outOfStock {
@@ -282,4 +281,8 @@ textarea {
 .form-rev {
   width: 320px;
   padding: 1rem;
+}
+
+h2 {
+  font-size: 1.6em;
 }
