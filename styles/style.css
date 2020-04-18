@@ -37,6 +37,7 @@ ul {
       flex-wrap: wrap;
   margin: 0 !important;
   padding: 0 !important;
+  border-bottom: 1px solid #a9a9a9;
 }
 
 a {
@@ -129,11 +130,11 @@ select {
 
 .cart {
   position: absolute;
-  top: 0;
+  top: -52px;
   right: 0;
   border: 1px solid #d8d8d8;
   padding: 0.6rem 1rem;
-  margin: 1rem;
+  margin: 0 1rem;
   z-index: 99;
   background: #fff;
   border-radius: 0.5rem;

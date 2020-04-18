@@ -31,6 +31,18 @@
         @add-to-cart="updateCartAdd"
         @remove-from-cart="updateCartRemove"
       ></product>
+      <product
+        class="product"
+        :premium="premium"
+        @add-to-cart="updateCartAdd"
+        @remove-from-cart="updateCartRemove"
+      ></product>
+      <product
+        class="product"
+        :premium="premium"
+        @add-to-cart="updateCartAdd"
+        @remove-from-cart="updateCartRemove"
+      ></product>
 
       <div class="cart">
         Cart ({{ cart.length }}) <a href="#" @click="resetCart">&times;</a>
