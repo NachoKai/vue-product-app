@@ -1,5 +1,6 @@
 Vue.component("product-review", {
   template: `
+  <div class="form-rev">
   <form class="review-form" @submit.prevent="onSubmit">
 
     <p v-if="errors.length">
@@ -11,16 +12,15 @@ Vue.component("product-review", {
     </p>
 
     <p>
-      <label for="name">Name:</label><br>
-      <input id="name" v-model="name" required>
+      <label for="name">Name:</label>
+      <input style="width: 100%" id="name" v-model="name" required>
     </p>
-    <p>
-      <label for="review">Review:</label><br>
+    <p class="review-textarea">
+      <label for="review">Review:</label>
       <textarea id="review" v-model="review" required></textarea>
     </p>
-    <br>
     <p>
-      <label for="rating">Rating</label><br>
+      <label for="rating">Rating:</label>
       <select id="rating" v-model.number="rating" required>
         <option>1</option>
         <option>2</option>
@@ -29,19 +29,20 @@ Vue.component("product-review", {
         <option>5</option>
       </select>
     </p>
-    <br>
-    <p>
-      <label for="recommend">Would you reccomend this product?</label>
-      <br>
-      <label> Yes <input type="radio" value="Yes" v-model="recommend" />
-      </label>
-      <label> No <input type="radio" value="No" v-model="recommend" />
-      </label>
-    </p>
+    <!-- <p class="rating-reco">
+      <label for="recommend">Would you reccomend this product?:</label>
+    <div class="reco-btns">
+      <span class="reco-btn" style="margin: 0 1rem"> Yes <input type="radio" value="Yes" v-model="recommend" />
+      </span>
+      <span class="reco-btn" style="margin: 0 1rem"> No <input type="radio" value="No" v-model="recommend" />
+      </span>
+    </div>
+    </p> -->
 
     <input type="submit" class="review-btn" value="Submit">
 
   </form>
+  </div>
   `,
   data() {
     return {
@@ -159,7 +160,7 @@ Vue.component("product", {
   <div class="product">
 
     <div class="product-image">
-      <img :src="image" :alt="altText" />
+      <img style="max-width: 320px;" :src="image" :alt="altText" />
     </div>
 
     <div class="product-info">
@@ -173,13 +174,10 @@ Vue.component("product", {
       </p>
       <p>Shipping: {{ shipping }}</p>
       <p>{{ description }}</p>
-       <br>
       <a :href="link">More info</a>
-        <br>
       <ul>
         <li v-for="detail in details">• {{ detail }}</li>
       </ul>
-        <br>
 <div class="color-size">
       <div class="colors">
       <b class="color-title">Colors:</b>
@@ -192,26 +190,25 @@ Vue.component("product", {
           <option v-for="size in sizes">{{ size }}</option>
         </select>
       </div></div>
-        <br>
         <div class="buttons">
             <button @click="addToCart" :disabled="!inStock" :class="{ disabledButton: !inStock }">Add to cart</button>
             <button @click="removeFromCart" :disabled="inStock" :class="{ disabledButton: inStock }">Remove from cart</button></div>
         </div>
 
-        <div>
+        <div class="reviews-list">
         <h2>Reviews</h2>
         <p v-if="!reviews.length">There are no reviews yet.</p>
           <ul>
             <li v-for="review in reviews">
             <p><b>Name: </b>{{ review.name }}</p>
             <p><b>Rating: </b>{{ review.rating }}</p>
-            <p><b>Review: </b>{{ review.review }}</p>
+            <p style="margin-bottom: 1rem"><b>Review: </b>{{ review.review }}</p>
             </li>
           </ul>
         </div>
-
+        
         <product-review @review-submitted="addReview"></product-review>
-  </div>
+        </div>
   `,
 });
 

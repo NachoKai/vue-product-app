@@ -19,14 +19,16 @@ ul {
 }
 
 #app {
+  box-sizing: border-box;
   position: relative;
-  margin: 30px;
 }
 
 .product {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-column-gap: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 a {
@@ -36,12 +38,17 @@ a {
 }
 
 .product-image {
+  min-width: 320px;
+  min-width: 320px;
+  padding: 1rem;
+
   img {
+    width: 100%;
+    height: auto;
     display: block;
     border: 1px solid #d8d8d8;
     border-radius: 0.5rem;
     max-width: 100%;
-    padding: 20px;
     background: #fff;
   }
 }
@@ -50,6 +57,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  padding: 1rem;
+  min-width: 320px;
 
   h1 {
     margin: 0.5em 0;
@@ -65,7 +74,6 @@ a {
     margin: 0 0.5rem;
     width: 160px;
     height: 50px;
-    margin-bottom: 2em;
     border: none;
     border-radius: 0.5rem;
     background: #1e95ea;
@@ -85,6 +93,7 @@ a {
 
 .buttons {
   display: flex;
+  margin: 1rem 0;
 }
 
 button,
@@ -106,22 +115,48 @@ select {
   top: 0;
   right: 0;
   border: 1px solid #d8d8d8;
-  padding: 1.25em 20px;
+  padding: 0.6rem 1rem;
+  margin: 1rem;
+  z-index: 99;
   background: #fff;
   border-radius: 0.5rem;
 }
 
 .review-form {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  min-width: 250px;
   border-radius: 0.5rem;
-  width: 50%;
+  width: 100%;
   padding: 20px;
   border: 1px solid #d8d8d8;
   background-color: #fff;
-}
 
-input {
-  max-width: 240px;
-  margin-bottom: 20px;
+  input,
+  textarea {
+    min-height: 30px;
+    border-radius: 0.5rem;
+    border: 1px solid #a9a9a9;
+    max-width: 250px;
+  }
+  select {
+    min-width: 50px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border: 1px solid #a9a9a9;
+    margin-bottom: 20px;
+  }
+
+  p {
+    label {
+      font-weight: bold;
+      margin-right: 1rem;
+    }
+  }
 }
 
 textarea {
@@ -162,4 +197,42 @@ textarea {
   position: relative;
   margin-right: auto;
   margin-left: auto;
+}
+
+.review-textarea {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  textarea {
+    width: 100%;
+  }
+}
+
+.rating-reco {
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .reco-btns {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+.reviews-list {
+  padding: 1rem;
+  min-width: 320px;
+
+  p {
+    margin-bottom: 0.1rem;
+  }
+}
+
+.form-rev {
+  width: 320px;
+  padding: 1rem;
 }
